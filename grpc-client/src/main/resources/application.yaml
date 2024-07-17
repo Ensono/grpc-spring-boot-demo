@@ -1,0 +1,11 @@
+grpc:
+  client:
+    grpc-hello-client:
+      address: static://localhost:8085
+      negotiation-type: plaintext
+    grpc-book-client:
+      address: static://localhost:8085
+      negotiation-type: plaintext
+    grpc-stock-client:
+      address: static://localhost:8085
+      negotiation-type: plaintext

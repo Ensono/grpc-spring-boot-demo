@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+option java_package = "org.example.grpc.common.generated";
+option java_multiple_files = true;
+
+message Stock {
+  string tickerSymbol = 1;
+  string companyName = 2;
+}
+
+message StockQuote {
+  double price = 1;
+  int32 offerNumber = 2;
+  string description = 3;
+}
+
+service StockService {
+
+  rpc serverSideStreamingGetListStockQuotes(Stock) returns (stream StockQuote) {}
+
+  rpc clientSideStreamingGetStatisticsOfStocks(stream Stock) returns (StockQuote) {}
+
+  rpc bidirectionalStreamingGetListsStockQuotes(stream Stock) returns (stream StockQuote) {}
+}

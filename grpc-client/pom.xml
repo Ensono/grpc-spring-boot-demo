@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project>
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>org.example.grpc</groupId>
+        <artifactId>spring-grpc-demo</artifactId>
+        <version>1.0</version>
+    </parent>
+
+    <groupId>org.example.grpc.client</groupId>
+    <artifactId>grpc-client</artifactId>
+    <name>grpc-client</name>
+    <description>gRPC client demo project for Spring Boot</description>
+
+    <dependencies>
+
+        <dependency>
+            <groupId>org.example.grpc.common</groupId>
+            <artifactId>grpc-common</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>net.devh</groupId>
+            <artifactId>grpc-client-spring-boot-starter</artifactId>
+            <version>${grpc-spring-boot-starter.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+</project>

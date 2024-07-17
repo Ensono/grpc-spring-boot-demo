@@ -1,0 +1,11 @@
+grpc:
+  client:
+    hello-world:
+      address: in-process:test
+    books:
+      address: in-process:test
+    stocks:
+      address: in-process:test
+  server:
+    inProcessName: test
+    port: -1
